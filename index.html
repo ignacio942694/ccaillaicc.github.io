@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>我们的时间</title>
-    <meta charset="UTF-8">
-    <style>
-        body {
-            background-color: #f5f5f5;
-            font-family: Arial;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #333;
-        }
-        .box {
-            background: white;
-            padding: 30px;
-            margin: 20px auto;
-            width: 60%;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-    </style>
+<meta charset="UTF-8">
+<title>我们的时间</title>
+<style>
+body{
+    background: linear-gradient(to bottom, #fdfbfb, #ebedee);
+    font-family: Arial;
+    text-align:center;
+    padding:50px;
+}
+h1{
+    font-size:40px;
+}
+.box{
+    background:white;
+    padding:30px;
+    margin:20px auto;
+    width:60%;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+.days{
+    font-size:28px;
+    color:#ff6b81;
+}
+</style>
 </head>
 <body>
 
 <h1>欢迎来到我们的时间</h1>
 
 <div class="box">
-    <h2>2024.05</h2>
-    <p>这是我们故事开始的地方。</p>
+    <h2>我们已经在一起</h2>
+    <p class="days" id="days"></p>
 </div>
 
-<div class="box">
-    <h2>未来</h2>
-    <p>未完待续…</p>
-</div>
+<script>
+var startDate = new Date("2025-0-27"); 
+var today = new Date();
+var timeDiff = today - startDate;
+var days = Math.floor(timeDiff / (1000 * 3600 * 24));
+document.getElementById("days").innerHTML = days + " 天";
+</script>
 
 </body>
 </html>
